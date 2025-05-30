@@ -13,18 +13,12 @@ MimiSAI is still under development, and further modifications and improvements s
 **Injection → Associated SO<sub>2</sub>response → Associated SO<sub>4</sub> response  → Associated AOD response (ERF response)  →  Temperature perturbation**
 
 The SO2 response is modeled as:
-\[
-\begin{aligned}
-t_1 &: I_1 \\
-t_2 &: I_2 + e I_1 \\
-t_3 &: I_3 + e I_2 + e^2 I_1 \\
-t_4 &: I_4 + e I_3 + e^2 I_2 + e^3 I_1
-\end{aligned}
-\]
+At time $t_1$: $I_1$  
+At time $t_2$: $I_2 + e I_1$  
+At time $t_3$: $I_3 + e I_2 + e^2 I_1$  
+At time $t_4$: $I_4 + e I_3 + e^2 I_2 + e^3 I_1$  
 
-Thus, at time \( t_n \):
+Thus, at time $t_n$:
 
+$I_n = e I_{n-1} + e^2 I_{n-2} + e^3 I_{n-3} + \cdots + e^{n-1} I_1$
 
-\[
-I_n = e I_{n-1} + e^2 I_{n-2} + e^3 I_{n-3} + \cdots + e^{n-1} I_1
-\]
