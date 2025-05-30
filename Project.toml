@@ -1,0 +1,20 @@
+name = "MimiSAI"
+uuid = "8c6d3755-4334-454d-90d5-a76c83187cab"
+version = "1.0.0"
+
+[deps]
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Mimi = "e4e893b0-ee5e-52ea-8111-44b3bdec128c"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+
+[compat]
+DelimitedFiles = "1.9.1"
+Mimi = "1.5.3"
+Random = "1.11.0"
+Revise = "3.7.6"
+SpecialFunctions = "2.5.1"
+StatsBase = "0.34.4"
