@@ -21,6 +21,6 @@ At time $t_4$: $I_4 + \epsilon I_3 + \epsilon^2 I_2 + \epsilon^3 I_1$
 .  
 .  
 At time $t_n$:  
-$I_n = \epsilon I_{n-1} + \epsilon^2 I_{n-2} + \epsilon^3 I_{n-3} + \cdots + \epsilon^{n-1} I_1$
+$I_n = \epsilon I_{n-1} + \epsilon^2 I_{n-2} + \epsilon^3 I_{n-3} + \cdots + \epsilon^{n-1} I_1$ \
 Thus, at any timestamp (n), $S_n = \sum_{k=0}^{n-1} \epsilon^{k} I_{n-k}$. Where I is injection amount, and \varepsilon is a serial correlation coefficient denoting how past injections affect the current state. 
 
