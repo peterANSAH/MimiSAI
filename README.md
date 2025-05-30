@@ -5,20 +5,21 @@ MimiSAI conforms to key constraints in most SAI simulations. These include maint
 As such, it may not be suitable for Arctic and other regional SAI scenarios. It is yet incoporate regional scenarios. 
 
 The model is tuned using data from the "Assessing Responses and Impacts of Solar intervention on the Earth system with Stratospheric Aerosol Injection (ARISE-SAI)". 
-The injection data in the base model corresponds to ARISE-SAI-1.5, but users can supply their injection files via the data directory to generate corresponding perturbation. 
-**Note** 2035 is the current default first injection year, but this can be modified to suit your experiment. 
+The injection data in the base model corresponds to ARISE-SAI-1.5, but users can specify their injection files via the data directory (/data) to generate corresponding perturbations. 
+**Note** 2035 is currently the default first injection year. However, you can modify this to suit your experiment. 
 MimiSAI is still under development, and further modifications and improvements should be expected in the near future.
 
 # Emulator Chain 
 **Injection → Associated SO<sub>2</sub>response → Associated SO<sub>4</sub> response  → Associated AOD response (ERF response)  →  Temperature perturbation**
 
-The SO2 response is modeled as:
+I model SO2 response post-injection as:
 At time $t_1$: $I_1$  
-At time $t_2$: $I_2 + e I_1$  
-At time $t_3$: $I_3 + e I_2 + e^2 I_1$  
-At time $t_4$: $I_4 + e I_3 + e^2 I_2 + e^3 I_1$  
-
-Thus, at time $t_n$:
-
-$I_n = e I_{n-1} + e^2 I_{n-2} + e^3 I_{n-3} + \cdots + e^{n-1} I_1$
+At time $t_2$: $I_2 + \varepsilon I_1$  
+At time $t_3$: $I_3 + \varepsilon I_2 + \varepsilon^2 I_1$  
+At time $t_4$: $I_4 + \varepsilon I_3 + \varepsilon^2 I_2 + \varepsilon^3 I_1$  
+.  
+.  
+At time $t_n$:  
+$I_n = \varepsilon I_{n-1} + \varepsilon^2 I_{n-2} + \varepsilon^3 I_{n-3} + \cdots + \varepsilon^{n-1} I_1$
+Thus, at any timestamp (n), $S_n = \sum_{k=0}^{n-1} \varepsilon^{k} I_{n-k}$. Where I is injection amount, and \varepsilon is a serial correlation coefficient denoting how past injections affect the current state. 
 
