@@ -13,6 +13,8 @@ MimiSAI is still under development, and further modifications and improvements s
 **Injection → Associated SO<sub>2</sub>response → Associated SO<sub>4</sub> response  → Associated AOD response (ERF response)  →  Temperature perturbation**
 
 I model SO2 response post-injection as:
+\\
+
 At time $t_1$: $I_1$  
 At time $t_2$: $I_2 + \epsilon I_1$  
 At time $t_3$: $I_3 + \epsilon I_2 + \varepsilon^2 I_1$  
@@ -22,5 +24,4 @@ At time $t_4$: $I_4 + \epsilon I_3 + \epsilon^2 I_2 + \epsilon^3 I_1$
 At time $t_n$:  
 $I_n = \epsilon I_{n-1} + \epsilon^2 I_{n-2} + \epsilon^3 I_{n-3} + \cdots + \epsilon^{n-1} I_1$
 Thus, at any timestamp (n), $S_n = \sum_{k=0}^{n-1} \epsilon^{k} I_{n-k}$. Where I is injection amount, and \varepsilon is a serial correlation coefficient denoting how past injections affect the current state. 
-
 
