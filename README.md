@@ -16,7 +16,7 @@ I model SO2 response post-injection as:
 \
 At time $t_1$: $I_1$  
 At time $t_2$: $I_2 + \epsilon I_1$  
-At time $t_3$: $I_3 + \epsilon I_2 + \varepsilon^2 I_1$  
+At time $t_3$: $I_3 + \epsilon I_2 + \epsilon^2 I_1$  
 At time $t_4$: $I_4 + \epsilon I_3 + \epsilon^2 I_2 + \epsilon^3 I_1$  
 .  
 .  
