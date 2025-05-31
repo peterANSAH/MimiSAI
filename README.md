@@ -20,10 +20,10 @@ MimiSAI is still under development, and further modifications and improvements s
 
 I model the associated SO₂ response (above the background SSP) post-injection as:
 
-At time $t_1$: $I_1$  
-At time $t_2$: $I_2 + \epsilon I_1$  
-At time $t_3$: $I_3 + \epsilon I_2 + \epsilon^2 I_1$  
-At time $t_4$: $I_4 + \epsilon I_3 + \epsilon^2 I_2 + \epsilon^3 I_1$  
+At time $t_1: I_1$  
+At time $t_2: I_2 + \epsilon I_1$  
+At time $t_3: I_3 + \epsilon I_2 + \epsilon^2 I_1$  
+At time $t_4: I_4 + \epsilon I_3 + \epsilon^2 I_2 + \epsilon^3 I_1$  
 ⋮  
 At time $t_n$:  
 $I_n = \epsilon I_{n-1} + \epsilon^2 I_{n-2} + \epsilon^3 I_{n-3} + \cdots + \epsilon^{n-1} I_1$
@@ -39,12 +39,12 @@ Where $I$ is the injection amount and $\epsilon$ is a **serial correlation coeff
 Temperature perturbation due to the AOD response is simulated using the semi-finite diffusion approach deployed in most simple climate emulators, and also adopted in <sup>[2]</sup>. <sup>[2]</sup> simulated the impulse response (h_(SAI) as:
 
 $$
-h_{SAI}(t) = \mu \cdot (\sqrt{\frac{1}{\pi t \tau}} - e^{\frac{t}{\tau}} \cdot \operatorname{erfc}\left( \sqrt{\frac{t}{\tau}} \right))
+h_{SAI}(t) = \mu (\sqrt{\frac{1}{\pi t \tau}} - e^{\frac{t}{\tau}}{erfc}\left( \sqrt{\frac{t}{\tau}} \right))
 $$
 
 And the temperature perturbation from the convolution:
 $$
-T(t) = \sum_{j=1}^{t} \left[ h_{SAI}(j) \cdot g(t - j) \right]
+T(t) = \sum_{j=1}^{t} \left[ h_{SAI}(j) g(t - j) \right]
 $$
 
 Where $\tau$ is a timescale, $t$ is time in years, $g$ is AOD above the background (SSP), $\mu$ is a scale factor in °C/AOD, and $T$ is temperature above the background (SSP). Unlike<sup>[2]</sup>, who used monthly resolved data, $\tau$ and $\mu$ were derived using yearly data for the optimization.
