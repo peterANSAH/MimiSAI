@@ -2,7 +2,7 @@
 
 # MimiSAI
 
-MimiSAI is a Mimi-based emulator that generates the delta temperatures needed to perturb SSPs under 
+MimiSAI is a simple Mimi-based emulator that generates the delta temperatures needed to perturb SSPs under 
 Stratospheric Aerosol Injection. This model - a subset of my ongoing project - is designed to be coupled
 with the Finite Amplitude Impulse Response Climate Model  (**FAIR**) to produce reasonable temperatures, that can then be fed into Integrated Assessment Models.
 MimiSAI conforms to key constraints in most SAI simulations. These include maintaining global average temperatures, equator to pole, and 
