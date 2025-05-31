@@ -44,7 +44,7 @@ $$
 
 And the temperature perturbation from the convolution:
 $$
-T(t) = \sum_{j=1}^{t} \left[ h_{SAI}(j) g(t - j) \right]
+T(t) = \sum_{j=1}^{t} h_{SAI}(j) g(t - j)
 $$
 
 Where $\tau$ is a timescale, $t$ is time in years, $g$ is AOD above the background (SSP), $\mu$ is a scale factor in °C/AOD, and $T$ is temperature above the background (SSP). Unlike<sup>[2]</sup>, who used monthly resolved data, $\tau$ and $\mu$ were derived using yearly data for the optimization.
