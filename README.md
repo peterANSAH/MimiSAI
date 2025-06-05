@@ -39,7 +39,7 @@ Where $I$ is the injection amount and $\epsilon$ is a **serial correlation coeff
 Temperature perturbation due to the AOD response is simulated using the semi-finite diffusion approach deployed in most simple climate emulators, and also adopted in <sup>[2]</sup>. <sup>[2]</sup> simulated the impulse response (h_(SAI) as:
 
 $$
-h_{SAI}(t) = \mu (\sqrt{\frac{1}{\pi t \tau}} - e^{\frac{t}{\tau}}{erfc}\left( \sqrt{\frac{t}{\tau}} \right))
+h_{SAI}(t) = \mu (\sqrt{\frac{1}{\pi t \tau}} - e^{\frac{-t}{\tau}}{erfc}\left( \sqrt{\frac{t}{\tau}} \right))
 $$
 
 And the temperature perturbation from the convolution:
